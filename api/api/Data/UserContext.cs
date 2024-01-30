@@ -6,7 +6,7 @@ namespace api.Data
     public class UserContext : DbContext
     {
         public UserContext(DbContextOptions<UserContext> options) : base(options) { }
-        DbSet<User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

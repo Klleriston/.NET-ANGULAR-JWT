@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nipi+c8oQ5g5nc1nC1HL1FHdpqK4ddwSG5Ce/ZGtxNBj84TUuIcAW46ws7sNeqm0PfqNcE64dRHBnoB0OxKxmg==",
+  "dgSpecHash": "61Zd4s9sXN/BKdSV+P4ipYrh8WwooYuEVXIvhMO9XAd2GHihzD1lupfpEeE1lnAx/Zk0DQ/17sh81DKvnbsSeQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\klleriston_calriz\\Desktop\\.net-jwt-angular\\api\\api\\api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\klleriston_calriz\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\klleriston_calriz\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\klleriston_calriz\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.1\\microsoft.aspnetcore.authentication.jwtbearer.8.0.1.nupkg.sha512",
     "C:\\Users\\klleriston_calriz\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

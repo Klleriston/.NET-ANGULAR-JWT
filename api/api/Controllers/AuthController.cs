@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using api.Data;
+using api.DTO;
+using api.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace api.Controllers
 {
@@ -6,10 +9,23 @@ namespace api.Controllers
     [Route("/")]
     public class AuthController : Controller
     {
-        [HttpGet]
-        public IActionResult Register()
+        private readonly IUserRepository _userRepository;
+
+        public AuthController(IUserRepository userRepository)
         {
-            return Ok("Sucess");
+            _userRepository = userRepository;
+        }
+
+        [HttpPost("/register")]
+        public IActionResult Register(RegisterDTO dTO)
+        {
+            var user = new User
+            {
+                Name = dTO.Name,
+                Email = dTO.Email,
+                Password = BCrypt.Net.BCrypt.HashPassword(dTO.Password)
+            };
+            return Created("sucess", _userRepository.Create(user));
         }
     }
 }
