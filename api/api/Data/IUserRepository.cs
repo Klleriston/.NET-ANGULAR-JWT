@@ -6,5 +6,6 @@ namespace api.Data
     {
         User Create(User user);
         User GetUserByEmail(string email);
+        User GetUserById(int id);
     }
 }

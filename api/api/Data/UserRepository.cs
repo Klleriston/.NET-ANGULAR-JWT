@@ -25,5 +25,12 @@ namespace api.Data
             return user;
 
         }
+        public User GetUserById(int id)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Id == id);
+
+            return user;
+
+        }
     }
 }
