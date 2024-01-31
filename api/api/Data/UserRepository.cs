@@ -1,4 +1,5 @@
 ﻿using api.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace api.Data
 {
@@ -15,6 +16,14 @@ namespace api.Data
             _context.Users.Add(user);
             user.Id = _context.SaveChanges();
             return user;
+        }
+
+        public User GetUserByEmail(string email)
+        {
+            var user = _context.Users.FirstOrDefault(u => u.Email == email);
+
+            return user;
+
         }
     }
 }

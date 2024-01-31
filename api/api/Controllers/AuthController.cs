@@ -27,5 +27,16 @@ namespace api.Controllers
             };
             return Created("sucess", _userRepository.Create(user));
         }
+
+        [HttpPost("/login")]
+        public IActionResult Login(LoginDTO loginDTO)
+        {
+            var user = _userRepository.GetUserByEmail(loginDTO.Email);
+
+            if (user == null || !BCrypt.Net.BCrypt.Verify(loginDTO.Password, user.Password)) return BadRequest(new { message = "Invalid credencials" });
+
+            return Ok(user);
+
+        }
     }
 }
