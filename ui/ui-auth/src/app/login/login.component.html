@@ -1,0 +1,19 @@
+<div class="content">
+  <main>
+    <section class="login">
+      <form [formGroup]="form" (submit)="submit()">
+      <h1 class="mtop">Por favor faça login:</h1>
+      <label class="inf">
+        <input formControlName="email" type="text" name="email" id="textuser" placeholder="EMAIL">
+        <input formControlName="password" type="password" name="password" id="password" placeholder="PASSWORD">
+      </label>
+      <a routerLink="/register">
+        <p class="txt">Criar uma conta</p>
+      </a>
+      <button class="botao" type="submit">Enviar</button>
+      </form>
+    </section>
+    <section class="wallpaper">
+    </section>
+  </main>
+</div>

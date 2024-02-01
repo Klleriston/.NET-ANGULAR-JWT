@@ -16,7 +16,7 @@ var app = builder.Build();
 app.UseHttpsRedirection();
 
 app.UseCors(o => o
-    .WithOrigins(new[] {"http://localhost:3000",} ) ///PORTA DO FRONTEND ANGULAS
+    .WithOrigins(new[] {"http://localhost:4200",} ) ///PORTA DO FRONTEND ANGULAS
     .AllowCredentials()
     .AllowAnyHeader()
     .AllowAnyMethod()
